@@ -1,0 +1,26 @@
+mohammadgh, ameersa
+===============================================================================
+Mohammad Ghanayem, ID 208653220, mohammad.ghanayem@mail.huji.ac.il
+Ameer Sayed Ahmad, ID 209334929, Ameer.SayedAhmad@mail.huji.ac.il
+===============================================================================
+
+                           Project 03 - An HDL File
+                           -----------------------
+
+
+Submitted Files
+---------------
+README - This file.
+a :-
+    Bit.hdl
+    PC.hdl
+    RAM8.hdl
+    RAM64.hdl
+    Register.hdl
+b :-
+    RAM4k.hdl
+    RAM16K.hdl
+    RAM512.hdl
+
+Remarks
+-------

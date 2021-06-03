@@ -1,0 +1,19 @@
+mohammadgh, ameersa
+===============================================================================
+Mohammad Ghanayem, ID 208653220, mohammad.ghanayem@mail.huji.ac.il
+Ameer Sayed Ahmad, ID 209334929, Ameer.SayedAhmad@mail.huji.ac.il
+===============================================================================
+
+                           Project 05 - An HDL File
+                           -----------------------
+
+
+Submitted Files
+---------------
+README - This file.
+Computer.hdl - a chip that represents the hack computer with its components
+CPU.hdl - a chip that represents the central processing unit
+Memory.hdl - a chip that represents the memory in the computer
+
+Remarks
+-------

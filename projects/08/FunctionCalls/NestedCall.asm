@@ -1,0 +1,684 @@
+// bootstrap
+@256
+ D=A
+ @SP
+ M=D
+@GLOBAL0:returnAddr
+D=A
+ @SP
+ A=M
+ M=D
+ @SP
+ M=M+1
+@LCL
+ D=M
+ @SP
+ A=M
+ M=D
+ @SP
+ M=M+1
+@ARG
+ D=M
+ @SP
+ A=M
+ M=D
+ @SP
+ M=M+1
+@THIS
+ D=M
+ @SP
+ A=M
+ M=D
+ @SP
+ M=M+1
+@THAT
+ D=M
+ @SP
+ A=M
+ M=D
+ @SP
+ M=M+1
+@SP
+ D=M
+ @0
+ D=D-A
+ @5
+ D=D-A
+ @ARG
+ M=D
+@SP
+ D=M
+ @LCL
+ M=D
+@FUNCTION_Sys.init
+ 0;JMP
+ (GLOBAL0:returnAddr)
+//C_FUNCTION Sys.init 0
+(FUNCTION_Sys.init)
+//C_PUSH constant 4000
+@4000
+ D=A
+ @SP
+ A=M
+ M=D
+@SP
+ M=M+1
+//C_POP pointer 0
+@SP
+ A=M-1
+ D=M
+ @THIS
+ M=D
+@SP
+ M=M-1
+//C_PUSH constant 5000
+@5000
+ D=A
+ @SP
+ A=M
+ M=D
+@SP
+ M=M+1
+//C_POP pointer 1
+@SP
+ A=M-1
+ D=M
+ @THAT
+ M=D
+@SP
+ M=M-1
+//C_CALL Sys.main 0
+@GLOBAL1:returnAddr
+D=A
+ @SP
+ A=M
+ M=D
+ @SP
+ M=M+1
+@LCL
+ D=M
+ @SP
+ A=M
+ M=D
+ @SP
+ M=M+1
+@ARG
+ D=M
+ @SP
+ A=M
+ M=D
+ @SP
+ M=M+1
+@THIS
+ D=M
+ @SP
+ A=M
+ M=D
+ @SP
+ M=M+1
+@THAT
+ D=M
+ @SP
+ A=M
+ M=D
+ @SP
+ M=M+1
+@SP
+ D=M
+ @0
+ D=D-A
+ @5
+ D=D-A
+ @ARG
+ M=D
+@SP
+ D=M
+ @LCL
+ M=D
+@FUNCTION_Sys.main
+ 0;JMP
+ (GLOBAL1:returnAddr)
+//C_POP temp 1
+@6
+ D=A
+ @MyPointer
+ M=D
+ @SP
+ A=M-1
+ D=M
+ @MyPointer
+ A=M
+ M=D
+@SP
+ M=M-1
+//C_LABEL LOOP
+(GLOBAL:LOOP)
+//C_GOTO LOOP
+@GLOBAL:LOOP
+ 0;JMP
+//C_FUNCTION Sys.main 5
+(FUNCTION_Sys.main)
+@SP
+ A=M
+ M=0
+ @SP
+ M=M+1
+@SP
+ A=M
+ M=0
+ @SP
+ M=M+1
+@SP
+ A=M
+ M=0
+ @SP
+ M=M+1
+@SP
+ A=M
+ M=0
+ @SP
+ M=M+1
+@SP
+ A=M
+ M=0
+ @SP
+ M=M+1
+//C_PUSH constant 4001
+@4001
+ D=A
+ @SP
+ A=M
+ M=D
+@SP
+ M=M+1
+//C_POP pointer 0
+@SP
+ A=M-1
+ D=M
+ @THIS
+ M=D
+@SP
+ M=M-1
+//C_PUSH constant 5001
+@5001
+ D=A
+ @SP
+ A=M
+ M=D
+@SP
+ M=M+1
+//C_POP pointer 1
+@SP
+ A=M-1
+ D=M
+ @THAT
+ M=D
+@SP
+ M=M-1
+//C_PUSH constant 200
+@200
+ D=A
+ @SP
+ A=M
+ M=D
+@SP
+ M=M+1
+//C_POP local 1
+@LCL
+ D=M
+ @1
+ D=D+A
+ @MyPointer
+ M=D
+ @SP
+ A=M-1
+ D=M
+ @MyPointer
+ A=M
+ M=D
+@SP
+ M=M-1
+//C_PUSH constant 40
+@40
+ D=A
+ @SP
+ A=M
+ M=D
+@SP
+ M=M+1
+//C_POP local 2
+@LCL
+ D=M
+ @2
+ D=D+A
+ @MyPointer
+ M=D
+ @SP
+ A=M-1
+ D=M
+ @MyPointer
+ A=M
+ M=D
+@SP
+ M=M-1
+//C_PUSH constant 6
+@6
+ D=A
+ @SP
+ A=M
+ M=D
+@SP
+ M=M+1
+//C_POP local 3
+@LCL
+ D=M
+ @3
+ D=D+A
+ @MyPointer
+ M=D
+ @SP
+ A=M-1
+ D=M
+ @MyPointer
+ A=M
+ M=D
+@SP
+ M=M-1
+//C_PUSH constant 123
+@123
+ D=A
+ @SP
+ A=M
+ M=D
+@SP
+ M=M+1
+//C_CALL Sys.add12 1
+@GLOBAL2:returnAddr
+D=A
+ @SP
+ A=M
+ M=D
+ @SP
+ M=M+1
+@LCL
+ D=M
+ @SP
+ A=M
+ M=D
+ @SP
+ M=M+1
+@ARG
+ D=M
+ @SP
+ A=M
+ M=D
+ @SP
+ M=M+1
+@THIS
+ D=M
+ @SP
+ A=M
+ M=D
+ @SP
+ M=M+1
+@THAT
+ D=M
+ @SP
+ A=M
+ M=D
+ @SP
+ M=M+1
+@SP
+ D=M
+ @1
+ D=D-A
+ @5
+ D=D-A
+ @ARG
+ M=D
+@SP
+ D=M
+ @LCL
+ M=D
+@FUNCTION_Sys.add12
+ 0;JMP
+ (GLOBAL2:returnAddr)
+//C_POP temp 0
+@5
+ D=A
+ @MyPointer
+ M=D
+ @SP
+ A=M-1
+ D=M
+ @MyPointer
+ A=M
+ M=D
+@SP
+ M=M-1
+//C_PUSH local 0
+@LCL
+ D=M
+ @0
+ D=D+A
+ A=D
+ D=M
+ @SP
+ A=M
+ M=D
+@SP
+ M=M+1
+//C_PUSH local 1
+@LCL
+ D=M
+ @1
+ D=D+A
+ A=D
+ D=M
+ @SP
+ A=M
+ M=D
+@SP
+ M=M+1
+//C_PUSH local 2
+@LCL
+ D=M
+ @2
+ D=D+A
+ A=D
+ D=M
+ @SP
+ A=M
+ M=D
+@SP
+ M=M+1
+//C_PUSH local 3
+@LCL
+ D=M
+ @3
+ D=D+A
+ A=D
+ D=M
+ @SP
+ A=M
+ M=D
+@SP
+ M=M+1
+//C_PUSH local 4
+@LCL
+ D=M
+ @4
+ D=D+A
+ A=D
+ D=M
+ @SP
+ A=M
+ M=D
+@SP
+ M=M+1
+//C_ARITHMETIC add
+@SP
+ A=M-1
+ D=M
+ @myv1
+ M=D
+ @2
+ D=A
+ @SP
+ A=M-D
+ D=M
+ @myv1
+D=D+M
+ @myRes
+ M=D
+@SP
+ M=M-1
+@myRes
+ D=M
+ @SP
+ A=M-1
+ M=D
+//C_ARITHMETIC add
+@SP
+ A=M-1
+ D=M
+ @myv1
+ M=D
+ @2
+ D=A
+ @SP
+ A=M-D
+ D=M
+ @myv1
+D=D+M
+ @myRes
+ M=D
+@SP
+ M=M-1
+@myRes
+ D=M
+ @SP
+ A=M-1
+ M=D
+//C_ARITHMETIC add
+@SP
+ A=M-1
+ D=M
+ @myv1
+ M=D
+ @2
+ D=A
+ @SP
+ A=M-D
+ D=M
+ @myv1
+D=D+M
+ @myRes
+ M=D
+@SP
+ M=M-1
+@myRes
+ D=M
+ @SP
+ A=M-1
+ M=D
+//C_ARITHMETIC add
+@SP
+ A=M-1
+ D=M
+ @myv1
+ M=D
+ @2
+ D=A
+ @SP
+ A=M-D
+ D=M
+ @myv1
+D=D+M
+ @myRes
+ M=D
+@SP
+ M=M-1
+@myRes
+ D=M
+ @SP
+ A=M-1
+ M=D
+//C_RETURN
+@LCL
+ D=M
+ @MY_FRAME
+ M=D
+ @5
+ A=D-A
+ D=M
+ @RETURN
+ M=D
+@SP
+ A=M-1
+ D=M
+ @ARG
+ A=M
+ M=D
+ @SP
+ M=M-1
+@ARG
+ D=M
+ @SP
+ M=D+1
+@MY_FRAME
+ A=M-1
+ D=M
+ @THAT
+ M=D
+@MY_FRAME
+ D=M
+ @2
+ A=D-A
+ D=M
+ @THIS
+ M=D
+@MY_FRAME
+ D=M
+ @3
+ A=D-A
+ D=M
+ @ARG
+ M=D
+@MY_FRAME
+ D=M
+ @4
+ A=D-A
+ D=M
+ @LCL
+ M=D
+@RETURN
+ A=M
+ 0;JMP
+//C_FUNCTION Sys.add12 0
+(FUNCTION_Sys.add12)
+//C_PUSH constant 4002
+@4002
+ D=A
+ @SP
+ A=M
+ M=D
+@SP
+ M=M+1
+//C_POP pointer 0
+@SP
+ A=M-1
+ D=M
+ @THIS
+ M=D
+@SP
+ M=M-1
+//C_PUSH constant 5002
+@5002
+ D=A
+ @SP
+ A=M
+ M=D
+@SP
+ M=M+1
+//C_POP pointer 1
+@SP
+ A=M-1
+ D=M
+ @THAT
+ M=D
+@SP
+ M=M-1
+//C_PUSH argument 0
+@ARG
+ D=M
+ @0
+ D=D+A
+ A=D
+ D=M
+ @SP
+ A=M
+ M=D
+@SP
+ M=M+1
+//C_PUSH constant 12
+@12
+ D=A
+ @SP
+ A=M
+ M=D
+@SP
+ M=M+1
+//C_ARITHMETIC add
+@SP
+ A=M-1
+ D=M
+ @myv1
+ M=D
+ @2
+ D=A
+ @SP
+ A=M-D
+ D=M
+ @myv1
+D=D+M
+ @myRes
+ M=D
+@SP
+ M=M-1
+@myRes
+ D=M
+ @SP
+ A=M-1
+ M=D
+//C_RETURN
+@LCL
+ D=M
+ @MY_FRAME
+ M=D
+ @5
+ A=D-A
+ D=M
+ @RETURN
+ M=D
+@SP
+ A=M-1
+ D=M
+ @ARG
+ A=M
+ M=D
+ @SP
+ M=M-1
+@ARG
+ D=M
+ @SP
+ M=D+1
+@MY_FRAME
+ A=M-1
+ D=M
+ @THAT
+ M=D
+@MY_FRAME
+ D=M
+ @2
+ A=D-A
+ D=M
+ @THIS
+ M=D
+@MY_FRAME
+ D=M
+ @3
+ A=D-A
+ D=M
+ @ARG
+ M=D
+@MY_FRAME
+ D=M
+ @4
+ A=D-A
+ D=M
+ @LCL
+ M=D
+@RETURN
+ A=M
+ 0;JMP

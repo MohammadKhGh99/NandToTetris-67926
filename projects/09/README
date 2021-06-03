@@ -1,0 +1,20 @@
+mohammadgh, ameersa
+===============================================================================
+Mohammad Ghanayem, ID 208653220, mohammad.ghanayem@mail.huji.ac.il
+Ameer Sayed Ahmad, ID 209334929, Ameer.SayedAhmad@mail.huji.ac.il
+===============================================================================
+
+                           Project 09 - A Jack project
+                           -----------------------
+
+
+Submitted Files
+---------------
+README - This file.
+Board.jack - the file that handles the board image and draw it.
+Game.jack - the file that handles the game turns.
+Main.jack - the file that handles all the drawings and the game process.
+
+Remarks
+-------
+press any number between 1 - 9 to select the place that you want to put your X or O, the first turn is X turn.

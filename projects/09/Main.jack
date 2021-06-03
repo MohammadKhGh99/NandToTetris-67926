@@ -1,0 +1,56 @@
+class Main{
+	function void main(){
+		var char winner;
+		var Game game;
+		var Array s, spaces;
+		var String msg;
+		var int i;
+		let game = Game.new();
+		let winner = game.runGame();
+		do Sys.wait(2000);
+		do Screen.clearScreen();
+
+		let s = Array.new(64);
+		while(i < 9){
+			do Output.println();
+			let i = i + 1;
+		}
+		do Main.fillPrintArray(s, 64, 42, 1);
+		do Output.println();
+
+		let spaces = Array.new(20);
+		do Main.fillPrintArray(spaces, 20, 32, 1);
+		if (winner = 88) {
+			do Output.printChar(88);
+		}
+		if (winner = 79){
+			do Output.printChar(79);
+		}
+		let msg = "_player you won, Congraaaats!!!";
+		do Output.printString(msg);
+		do Output.println();
+		do Output.println();
+		do Main.fillPrintArray(s, 64, 42, 0);
+
+		do game.dispose();
+		return;
+	}
+	
+	function void fillPrintArray(Array arr, int len, int c, int flag){
+		var int i;
+		if(flag = 1){
+			let i = 0;
+			while(i < len){
+				let arr[i] = c;
+				let i = i + 1;
+			}
+		}
+		let i = 0;
+		while(i < len){
+			do Output.printChar(arr[i]);
+			let i = i + 1;
+		}
+		return;
+	}
+}
+

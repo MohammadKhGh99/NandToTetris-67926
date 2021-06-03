@@ -1,0 +1,22 @@
+mohammadgh, ameersa
+===============================================================================
+Mohammad Ghanayem, ID 208653220, mohammad.ghanayem@mail.huji.ac.il
+Ameer Sayed Ahmad, ID 209334929, Ameer.SayedAhmad@mail.huji.ac.il
+===============================================================================
+
+                           Project 06 - A python File
+                           -----------------------
+
+
+Submitted Files
+---------------
+README - This file.
+Parser.py - class to remove all unnecessary lines
+SymbolsTable.py - class that represents the symbols table
+Assembler.py - the main file
+ToBinary - converting C-instruction to Binary
+Makefile - make file
+Assembler - run file
+
+Remarks
+-------

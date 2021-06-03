@@ -1,0 +1,537 @@
+// bootstrap
+@256
+ D=A
+ @SP
+ M=D
+@GLOBAL0:returnAddr
+D=A
+ @SP
+ A=M
+ M=D
+ @SP
+ M=M+1
+@LCL
+ D=M
+ @SP
+ A=M
+ M=D
+ @SP
+ M=M+1
+@ARG
+ D=M
+ @SP
+ A=M
+ M=D
+ @SP
+ M=M+1
+@THIS
+ D=M
+ @SP
+ A=M
+ M=D
+ @SP
+ M=M+1
+@THAT
+ D=M
+ @SP
+ A=M
+ M=D
+ @SP
+ M=M+1
+@SP
+ D=M
+ @0
+ D=D-A
+ @5
+ D=D-A
+ @ARG
+ M=D
+@SP
+ D=M
+ @LCL
+ M=D
+@FUNCTION_Sys.init
+ 0;JMP
+ (GLOBAL0:returnAddr)
+//C_FUNCTION Main.fibonacci 0
+(FUNCTION_Main.fibonacci)
+//C_PUSH argument 0
+@ARG
+ D=M
+ @0
+ D=D+A
+ A=D
+ D=M
+ @SP
+ A=M
+ M=D
+@SP
+ M=M+1
+//C_PUSH constant 2
+@2
+ D=A
+ @SP
+ A=M
+ M=D
+@SP
+ M=M+1
+//C_ARITHMETIC lt
+@SP
+ A=M-1
+ D=M
+ @myv1
+ M=D
+ @2
+ D=A
+ @SP
+ A=M-D
+ D=M
+ @myv2
+ M=D
+ @myv1
+D=M|D
+ @NORMAL_CHECK_0
+ D;JGE
+ @myv1
+ D=M
+ @V1_NEG_0
+ D;JLE
+ @myv2
+ D=M
+ @NORMAL_CHECK_0
+D;JGE
+ @myv1
+ M=1
+ @myv2
+ M=0
+ @NORMAL_CHECK_0
+ 0;JMP
+ (V1_NEG_0)
+ @myv2
+ D=M
+ @NORMAL_CHECK_0
+D;JLE
+ @myv1
+ M=0
+ @myv2
+ M=1
+(NORMAL_CHECK_0)
+ @myv2
+ D=M
+ @myv1
+D=D-M
+ @myRes
+ M=-1
+ @END_IF_0
+ D;JLT
+ @myRes
+ M=0
+ (END_IF_0)
+@SP
+ M=M-1
+@myRes
+ D=M
+ @SP
+ A=M-1
+ M=D
+//C_IF IF_TRUE
+@SP
+ AM=M-1
+ D=M
+ @GLOBAL:IF_TRUE
+ D;JNE
+//C_GOTO IF_FALSE
+@GLOBAL:IF_FALSE
+ 0;JMP
+//C_LABEL IF_TRUE
+(GLOBAL:IF_TRUE)
+//C_PUSH argument 0
+@ARG
+ D=M
+ @0
+ D=D+A
+ A=D
+ D=M
+ @SP
+ A=M
+ M=D
+@SP
+ M=M+1
+//C_RETURN
+@LCL
+ D=M
+ @MY_FRAME
+ M=D
+ @5
+ A=D-A
+ D=M
+ @RETURN
+ M=D
+@SP
+ A=M-1
+ D=M
+ @ARG
+ A=M
+ M=D
+ @SP
+ M=M-1
+@ARG
+ D=M
+ @SP
+ M=D+1
+@MY_FRAME
+ A=M-1
+ D=M
+ @THAT
+ M=D
+@MY_FRAME
+ D=M
+ @2
+ A=D-A
+ D=M
+ @THIS
+ M=D
+@MY_FRAME
+ D=M
+ @3
+ A=D-A
+ D=M
+ @ARG
+ M=D
+@MY_FRAME
+ D=M
+ @4
+ A=D-A
+ D=M
+ @LCL
+ M=D
+@RETURN
+ A=M
+ 0;JMP
+//C_LABEL IF_FALSE
+(GLOBAL:IF_FALSE)
+//C_PUSH argument 0
+@ARG
+ D=M
+ @0
+ D=D+A
+ A=D
+ D=M
+ @SP
+ A=M
+ M=D
+@SP
+ M=M+1
+//C_PUSH constant 2
+@2
+ D=A
+ @SP
+ A=M
+ M=D
+@SP
+ M=M+1
+//C_ARITHMETIC sub
+@SP
+ A=M-1
+ D=M
+ @myv1
+ M=D
+ @2
+ D=A
+ @SP
+ A=M-D
+ D=M
+ @myv1
+D=D-M
+ @myRes
+ M=D
+@SP
+ M=M-1
+@myRes
+ D=M
+ @SP
+ A=M-1
+ M=D
+//C_CALL Main.fibonacci 1
+@GLOBAL1:returnAddr
+D=A
+ @SP
+ A=M
+ M=D
+ @SP
+ M=M+1
+@LCL
+ D=M
+ @SP
+ A=M
+ M=D
+ @SP
+ M=M+1
+@ARG
+ D=M
+ @SP
+ A=M
+ M=D
+ @SP
+ M=M+1
+@THIS
+ D=M
+ @SP
+ A=M
+ M=D
+ @SP
+ M=M+1
+@THAT
+ D=M
+ @SP
+ A=M
+ M=D
+ @SP
+ M=M+1
+@SP
+ D=M
+ @1
+ D=D-A
+ @5
+ D=D-A
+ @ARG
+ M=D
+@SP
+ D=M
+ @LCL
+ M=D
+@FUNCTION_Main.fibonacci
+ 0;JMP
+ (GLOBAL1:returnAddr)
+//C_PUSH argument 0
+@ARG
+ D=M
+ @0
+ D=D+A
+ A=D
+ D=M
+ @SP
+ A=M
+ M=D
+@SP
+ M=M+1
+//C_PUSH constant 1
+@1
+ D=A
+ @SP
+ A=M
+ M=D
+@SP
+ M=M+1
+//C_ARITHMETIC sub
+@SP
+ A=M-1
+ D=M
+ @myv1
+ M=D
+ @2
+ D=A
+ @SP
+ A=M-D
+ D=M
+ @myv1
+D=D-M
+ @myRes
+ M=D
+@SP
+ M=M-1
+@myRes
+ D=M
+ @SP
+ A=M-1
+ M=D
+//C_CALL Main.fibonacci 1
+@GLOBAL2:returnAddr
+D=A
+ @SP
+ A=M
+ M=D
+ @SP
+ M=M+1
+@LCL
+ D=M
+ @SP
+ A=M
+ M=D
+ @SP
+ M=M+1
+@ARG
+ D=M
+ @SP
+ A=M
+ M=D
+ @SP
+ M=M+1
+@THIS
+ D=M
+ @SP
+ A=M
+ M=D
+ @SP
+ M=M+1
+@THAT
+ D=M
+ @SP
+ A=M
+ M=D
+ @SP
+ M=M+1
+@SP
+ D=M
+ @1
+ D=D-A
+ @5
+ D=D-A
+ @ARG
+ M=D
+@SP
+ D=M
+ @LCL
+ M=D
+@FUNCTION_Main.fibonacci
+ 0;JMP
+ (GLOBAL2:returnAddr)
+//C_ARITHMETIC add
+@SP
+ A=M-1
+ D=M
+ @myv1
+ M=D
+ @2
+ D=A
+ @SP
+ A=M-D
+ D=M
+ @myv1
+D=D+M
+ @myRes
+ M=D
+@SP
+ M=M-1
+@myRes
+ D=M
+ @SP
+ A=M-1
+ M=D
+//C_RETURN
+@LCL
+ D=M
+ @MY_FRAME
+ M=D
+ @5
+ A=D-A
+ D=M
+ @RETURN
+ M=D
+@SP
+ A=M-1
+ D=M
+ @ARG
+ A=M
+ M=D
+ @SP
+ M=M-1
+@ARG
+ D=M
+ @SP
+ M=D+1
+@MY_FRAME
+ A=M-1
+ D=M
+ @THAT
+ M=D
+@MY_FRAME
+ D=M
+ @2
+ A=D-A
+ D=M
+ @THIS
+ M=D
+@MY_FRAME
+ D=M
+ @3
+ A=D-A
+ D=M
+ @ARG
+ M=D
+@MY_FRAME
+ D=M
+ @4
+ A=D-A
+ D=M
+ @LCL
+ M=D
+@RETURN
+ A=M
+ 0;JMP
+//C_FUNCTION Sys.init 0
+(FUNCTION_Sys.init)
+//C_PUSH constant 4
+@4
+ D=A
+ @SP
+ A=M
+ M=D
+@SP
+ M=M+1
+//C_CALL Main.fibonacci 1
+@GLOBAL3:returnAddr
+D=A
+ @SP
+ A=M
+ M=D
+ @SP
+ M=M+1
+@LCL
+ D=M
+ @SP
+ A=M
+ M=D
+ @SP
+ M=M+1
+@ARG
+ D=M
+ @SP
+ A=M
+ M=D
+ @SP
+ M=M+1
+@THIS
+ D=M
+ @SP
+ A=M
+ M=D
+ @SP
+ M=M+1
+@THAT
+ D=M
+ @SP
+ A=M
+ M=D
+ @SP
+ M=M+1
+@SP
+ D=M
+ @1
+ D=D-A
+ @5
+ D=D-A
+ @ARG
+ M=D
+@SP
+ D=M
+ @LCL
+ M=D
+@FUNCTION_Main.fibonacci
+ 0;JMP
+ (GLOBAL3:returnAddr)
+//C_LABEL WHILE
+(GLOBAL:WHILE)
+//C_GOTO WHILE
+@GLOBAL:WHILE
+ 0;JMP

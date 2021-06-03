@@ -1,0 +1,21 @@
+mohammadgh, ameersa
+===============================================================================
+Mohammad Ghanayem, ID 208653220, mohammad.ghanayem@mail.huji.ac.il
+Ameer Sayed Ahmad, ID 209334929, Ameer.SayedAhmad@mail.huji.ac.il
+===============================================================================
+
+                           Project 02 - An HDL File
+                           -----------------------
+
+
+Submitted Files
+---------------
+README - This file.
+HalfAdder.hdl - a chip that adds two bits.
+FullAdder.hdl - a chip that adds three bits.
+Add16.hdl - a chip that adds two 16-bit numbers.
+Inc16.hdl - a chip that increment one 16-bit number by 1.
+ALU.hdl - a chip that do several processes, like adding.
+
+Remarks
+-------

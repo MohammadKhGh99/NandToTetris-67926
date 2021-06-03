@@ -1,0 +1,11 @@
+D:\Nand2Tetris\projects\07\MemoryAccess\BasicTest\BasicTest.vm
+D:\Nand2Tetris\projects\07\MemoryAccess\PointerTest\PointerTest.vm
+D:\Nand2Tetris\projects\07\MemoryAccess\StaticTest\StaticTest.vm
+D:\Nand2Tetris\projects\07\StackArithmetic\SimpleAdd\SimpleAdd.vm
+D:\Nand2Tetris\projects\07\StackArithmetic\StackTest\StackTest.vm
+D:\Nand2Tetris\projects\08\ProgramFlow\BasicLoop\BasicLoop.vm
+D:\Nand2Tetris\projects\08\ProgramFlow\FibonacciSeries\FibonacciSeries.vm
+D:\Nand2Tetris\projects\08\FunctionCalls\FibonacciElement
+D:\Nand2Tetris\projects\08\FunctionCalls\NestedCall
+D:\Nand2Tetris\projects\08\FunctionCalls\SimpleFunction\SimpleFunction.vm
+D:\Nand2Tetris\projects\08\FunctionCalls\StaticsTest

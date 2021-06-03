@@ -1,0 +1,21 @@
+mohammadgh, ameersa
+===============================================================================
+Mohammad Ghanayem, ID 208653220, mohammad.ghanayem@mail.huji.ac.il
+Ameer Sayed Ahmad, ID 209334929, Ameer.SayedAhmad@mail.huji.ac.il
+===============================================================================
+
+                           Project 08 - A python project
+                           -----------------------
+
+
+Submitted Files
+---------------
+README - This file.
+Parser.py - class to remove all unnecessary lines
+CodeWriter.py - class to get the appropriate commands lines in assembly from jack command
+VMtranslator.py - class that convert .vm file to assembly (.asm file)
+Makefile - make file
+VMtranslator - run file
+
+Remarks
+-------

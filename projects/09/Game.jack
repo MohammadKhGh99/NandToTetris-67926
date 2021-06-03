@@ -1,0 +1,274 @@
+class Game{
+	field Array board;
+	field int playerNumTurn;
+	field char Winner;
+
+
+	constructor Game new(){
+		var int counter;
+		let counter = 0;
+		let board = Array.new(9);
+		do Board.drawBoard();
+		do Board.drawAllNums();
+		while (counter < 9){
+			let board[counter] = 0;
+			let counter = counter + 1;
+		}
+		let playerNumTurn = 1;
+		let Winner = 0;
+		return this;
+	}
+
+	method void checkWhoWon(){
+		if ((Math.multiply(Math.multiply(board[0], board[1]), board[2]) = 8) |
+		(Math.multiply(Math.multiply(board[3], board[4]), board[5]) = 8) |
+		(Math.multiply(Math.multiply(board[6], board[7]), board[8]) = 8) |
+		(Math.multiply(Math.multiply(board[0], board[3]), board[6]) = 8) |
+		(Math.multiply(Math.multiply(board[1], board[4]), board[7]) = 8) |
+		(Math.multiply(Math.multiply(board[2], board[5]), board[8]) = 8) |
+		(Math.multiply(Math.multiply(board[0], board[4]), board[8]) = 8) |
+		(Math.multiply(Math.multiply(board[2], board[4]), board[6]) = 8))
+		{
+			let Winner = 79;
+		}
+		if ((Math.multiply(Math.multiply(board[0], board[1]), board[2]) = 1) |
+		(Math.multiply(Math.multiply(board[3], board[4]), board[5]) = 1) |
+		(Math.multiply(Math.multiply(board[6], board[7]), board[8]) = 1) |
+		(Math.multiply(Math.multiply(board[0], board[3]), board[6]) = 1) |
+		(Math.multiply(Math.multiply(board[1], board[4]), board[7]) = 1) |
+		(Math.multiply(Math.multiply(board[2], board[5]), board[8]) = 1) |
+		(Math.multiply(Math.multiply(board[0], board[4]), board[8]) = 1) |
+		(Math.multiply(Math.multiply(board[2], board[4]), board[6]) = 1))
+		{
+			let Winner = 88;
+		}
+		return;
+	}
+
+
+	method int pressKey(){
+		var int pressed_key;
+		var char key;
+		while((key > 57) | (key < 49)){
+			let key = Keyboard.keyPressed();
+		}
+		if (key = 49){
+			let pressed_key = 1;
+		}
+		if (key = 50){
+			let pressed_key = 2;
+		}
+		if (key = 51){
+			let pressed_key = 3;
+		}
+		if (key = 52){
+			let pressed_key = 4;
+		}
+		if (key = 53){
+			let pressed_key = 5;
+		}
+		if (key = 54){
+			let pressed_key = 6;
+		}
+		if (key = 55){
+			let pressed_key = 7;
+		}
+		if (key = 56){
+			let pressed_key = 8;
+		}
+		if (key = 57){
+			let pressed_key = 9;
+		}
+		return pressed_key;
+	}
+
+
+	method void turn(){
+		var int chosenNum;
+		let chosenNum = pressKey();
+		while ((board[chosenNum - 1] = 1) | (board[chosenNum - 1] = 2)){
+			let chosenNum = pressKey();
+		}
+		if (playerNumTurn = 1){
+			let board[chosenNum - 1] = 1;
+			do Board.eraseNum(chosenNum);
+			do Board.draw_X_letter(chosenNum);
+			let playerNumTurn = 2;
+		}
+		else{
+			let board[chosenNum - 1] = 2;
+			do Board.eraseNum(chosenNum);
+			do Board.draw_O_letter(chosenNum);
+			let playerNumTurn = 1;
+		}
+		do checkWhoWon();
+		return;
+	}
+
+	method void drawFinals(){
+		if (Math.multiply(Math.multiply(board[0], board[1]), board[2]) = 1) {
+			do Board.draw_X_letter(1);
+			do Board.draw_X_letter(2);
+			do Board.draw_X_letter(3);
+			do Board.drawWin(1252);
+			do Board.drawWin(1422);
+			do Board.drawWin(1592);
+		}
+		if (Math.multiply(Math.multiply(board[0], board[1]), board[2]) = 8) {
+			do Board.draw_O_letter(1);
+			do Board.draw_O_letter(2);
+			do Board.draw_O_letter(3);
+			do Board.drawWin(1252);
+			do Board.drawWin(1422);
+			do Board.drawWin(1592);
+		}
+		if (Math.multiply(Math.multiply(board[3], board[4]), board[5]) = 1) {
+			do Board.draw_X_letter(4);
+			do Board.draw_X_letter(5);
+			do Board.draw_X_letter(6);
+			do Board.drawWin(3972);
+			do Board.drawWin(4142);
+			do Board.drawWin(4312);
+		}
+		if (Math.multiply(Math.multiply(board[3], board[4]), board[5]) = 8) {
+			do Board.draw_O_letter(4);
+			do Board.draw_O_letter(5);
+			do Board.draw_O_letter(6);
+			do Board.drawWin(3972);
+			do Board.drawWin(4142);
+			do Board.drawWin(4312);
+		}
+		if (Math.multiply(Math.multiply(board[6], board[7]), board[8]) = 1) {
+			do Board.draw_X_letter(7);
+			do Board.draw_X_letter(8);
+			do Board.draw_X_letter(9);
+			do Board.drawWin(6692);
+			do Board.drawWin(6862);
+			do Board.drawWin(7032);
+		}
+		if (Math.multiply(Math.multiply(board[3], board[4]), board[5]) = 8) {
+			do Board.draw_O_letter(7);
+			do Board.draw_O_letter(8);
+			do Board.draw_O_letter(9);
+			do Board.drawWin(6692);
+			do Board.drawWin(6862);
+			do Board.drawWin(7032);
+		}
+		if (Math.multiply(Math.multiply(board[0], board[3]), board[6]) = 1) {
+			do Board.draw_X_letter(1);
+			do Board.draw_X_letter(4);
+			do Board.draw_X_letter(7);
+			do Board.drawWin(1252);
+			do Board.drawWin(3972);
+			do Board.drawWin(6692);
+		}
+		if (Math.multiply(Math.multiply(board[0], board[3]), board[6]) = 8) {
+			do Board.draw_O_letter(1);
+			do Board.draw_O_letter(4);
+			do Board.draw_O_letter(7);
+			do Board.drawWin(1252);
+			do Board.drawWin(3972);
+			do Board.drawWin(6692);
+		}
+		if (Math.multiply(Math.multiply(board[1], board[4]), board[7]) = 1) {
+			do Board.draw_X_letter(2);
+			do Board.draw_X_letter(5);
+			do Board.draw_X_letter(8);
+			do Board.drawWin(1422);
+			do Board.drawWin(4142);
+			do Board.drawWin(6862);
+		}
+		if (Math.multiply(Math.multiply(board[1], board[4]), board[7]) = 8) {
+			do Board.draw_O_letter(2);
+			do Board.draw_O_letter(5);
+			do Board.draw_O_letter(8);
+			do Board.drawWin(1422);
+			do Board.drawWin(4142);
+			do Board.drawWin(6862);
+		}
+		if (Math.multiply(Math.multiply(board[2], board[5]), board[8]) = 1) {
+			do Board.draw_X_letter(3);
+			do Board.draw_X_letter(6);
+			do Board.draw_X_letter(9);
+			do Board.drawWin(1592);
+			do Board.drawWin(4312);
+			do Board.drawWin(7032);
+		}
+		if (Math.multiply(Math.multiply(board[2], board[5]), board[8]) = 8) {
+			do Board.draw_O_letter(3);
+			do Board.draw_O_letter(6);
+			do Board.draw_O_letter(9);
+			do Board.drawWin(1592);
+			do Board.drawWin(4312);
+			do Board.drawWin(7032);
+		}
+		if (Math.multiply(Math.multiply(board[2], board[4]), board[6]) = 1) {
+			do Board.draw_X_letter(3);
+			do Board.draw_X_letter(5);
+			do Board.draw_X_letter(7);
+			do Board.drawWin(1592);
+			do Board.drawWin(4142);
+			do Board.drawWin(6692);
+		}
+		if (Math.multiply(Math.multiply(board[2], board[4]), board[6]) = 8) {
+			do Board.draw_O_letter(3);
+			do Board.draw_O_letter(5);
+			do Board.draw_O_letter(7);
+			do Board.drawWin(1592);
+			do Board.drawWin(4142);
+			do Board.drawWin(6692);
+		}
+		if (Math.multiply(Math.multiply(board[0], board[4]), board[8]) = 1) {
+			do Board.draw_X_letter(1);
+			do Board.draw_X_letter(5);
+			do Board.draw_X_letter(9);
+			do Board.drawWin(1252);
+			do Board.drawWin(4142);
+			do Board.drawWin(7032);
+		}
+		if (Math.multiply(Math.multiply(board[0], board[4]), board[8]) = 8)
+		{
+			do Board.draw_O_letter(1);
+			do Board.draw_O_letter(5);
+			do Board.draw_O_letter(9);
+			do Board.drawWin(1252);
+			do Board.drawWin(4142);
+			do Board.drawWin(7032);
+		}
+		return;
+	}
+
+	method char runGame(){
+		var int countTurns;
+		var int i;
+		let countTurns = 0;
+		while (countTurns < 9){
+			do turn();
+			if(~(Winner = 0))
+			{
+				do drawFinals();
+				return Winner;
+			}
+			let countTurns = countTurns + 1;
+			if(countTurns = 9){
+				do Sys.wait(1000);
+				do Screen.clearScreen();
+				let i = 0;
+				do Output.printString("No one has won, Reseting the Game...");
+				do Sys.wait(2000);
+				do Screen.clearScreen();
+				do dispose();
+				do Game.new();
+				let countTurns = 0;
+			}
+		}
+		return Winner;
+	}
+
+
+	method void dispose(){
+		do board.dispose();
+		do Memory.deAlloc(this);
+		return;
+	}
+}
